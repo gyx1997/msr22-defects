@@ -1,0 +1,3 @@
+from models.classification.baseclassifier import BaseClassifier
+from models.classification.textcnnclassifier import TextCNNClassifier
+from models.classification.lstmclassifier import LSTMClassifier
