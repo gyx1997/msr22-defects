@@ -6,7 +6,7 @@ import models.resampling
 import models.classification
 from preprocess import GlobalDictionary
 from utils.io import rmdir
-from os import mkdir
+from os import makedirs
 
 
 class BaseModel(metaclass=ABCMeta):
@@ -88,7 +88,7 @@ class BaseModel(metaclass=ABCMeta):
         Remove the old checkpoint directory and make a new one.
         """
         rmdir(self.get_model_checkpoint_name())
-        mkdir(self.get_model_checkpoint_name())
+        makedirs(self.get_model_checkpoint_name())
 
     def get_model_checkpoint_name(self):
         """
