@@ -19,7 +19,7 @@ from explanation.tokenomission import TokenOmission
 from explanation.metrics import deletion_metrics, explanation_precision
 from explanation.feature_representation import Instance, features_to_tokens
 from explanation.randomselection import RandomSelection
-from explanation.subspace import LIME
+from explanation.lime import LIME
 
 
 def get_project_name(dataset_name):
