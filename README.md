@@ -47,6 +47,7 @@ Make sure such directories exist:
 
 `./test/data/promise/xalan/2.6.0/`
 
+Also, directory `./test/data/pickled/` should be created if it does not exist.
 
 Then, use `run.py` to (1) preprocess the dataset, (2) train the models and (3) evaluate the local explanation
 methods.
