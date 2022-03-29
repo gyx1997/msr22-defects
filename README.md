@@ -53,7 +53,7 @@ methods.
 
 ### Preprocess the datasets 
 ```cmd
-$ python run.py --preprocess-dataset --project {project} --output {output}
+$ python run.py -preprocess-dataset --project {project} --output {output}
 ```
 In this step ASTs from the source code files will be extracted, and storage it to a seperate file to speed up 
 the process in training and evaluation stage. We ignore java files which do not contain class definition since `javalang` cannot parse
@@ -66,7 +66,7 @@ The parameter `{output}` specifies the filename for output.
 
 ### Train a source code-based defect prediction model
 ```cmd
-$ python run.py --train-model --project {project} --output {output} --model {model}
+$ python run.py -train-model --project {project} --output {output} --model {model}
 ```
 In this step the specified source code-based defect prediction model will be trained.
 
@@ -83,7 +83,7 @@ The parameter `{model}`  specifies a model for training. It can be one of `TF`, 
 ### Evaluate the local explanation methods
 Use `run.py` to evaluate the local explanation methods on several source code-based defect prediction models.
 ```cmd
-$ python run.py --project {project} --output {output} --model {model} --k {k}
+$ python run.py -eval-explanation --project {project} --output {output} --model {model} --k {k}
 ```
 In this step two local explanation methods as well as a baseline will be evaluated.
 
