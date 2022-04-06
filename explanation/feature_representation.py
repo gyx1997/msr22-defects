@@ -140,6 +140,10 @@ class Instance:
         Returns an atomic feature by given subscript or slice. To make it consistency,
             only list will be returned.
         """
+        
+        if len(self._atomic_features_sequence) == 0:
+            return []
+        
         if isinstance(item, int):
             # Got int as subscript.
             return [self._atomic_features[self._atomic_features_sequence[item]]]
